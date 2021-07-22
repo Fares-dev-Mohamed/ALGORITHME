@@ -1,0 +1,26 @@
+ALGORITHM Test phrase
+VAR
+    c : CHAR 
+    s : STRING :='';
+    nb-carac : INTEGER := 0;
+    nb-mot : INTEGER := 0;
+    nb-voy : INTEGER := 0;
+BEGIN
+    WHILE (c <> '.') DO
+        Read(c);
+        s:=s+c
+        nb-carac := nb-carac +1;
+        IF (c = 'a' OR c='e' OR c='i' OR c='o' OR c='u' OR c='y') THEN
+            nb-voy := nb-voy +1;
+        END_IF
+
+        IF (c=' ') THEN
+            nb-mot := nb-mot +1;
+        END_IF
+        
+    END_WHILE
+
+    Write("The length of the sentence is ",nb_carac);
+    Write("The number of words in the sentence is ",nb-voy);
+    Write("he number of vowels in the sentence. is ",nb-mot);
+END
